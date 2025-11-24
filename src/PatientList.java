@@ -1,18 +1,18 @@
 public class PatientList {
-    Node head;
+    PatientNode head;
     public PatientList(){       //Constructor
         this.head=null;
 
     }
     //adding the patient
     public void addPatient(Patient p){
-        Node newNode=new Node(p);
+        PatientNode newNode=new PatientNode(p);
         if(head==null){         //if list empty
             head=newNode;
             return;
         }
         //append at the end
-        Node current=head;
+        PatientNode current=head;
         while(current.next!=null){
             current=current.next;
         }
@@ -29,7 +29,7 @@ public class PatientList {
             System.out.println("ID: " + id + " removed");
             return;
         }
-        Node current = head;       //Look in between: Proceed by checking current.next
+        PatientNode current = head;       //Look in between: Proceed by checking current.next
         while (current.next != null && current.next.data.getId() != id) {
             current = current.next;
         }
@@ -42,7 +42,7 @@ public class PatientList {
     }
     //finding the patient
     public Patient findPatient(int id) {
-        Node current = head;
+        PatientNode current = head;
         while (current != null) {
             if (current.data.getId() == id) {
                 return current.data;  // found
@@ -57,7 +57,7 @@ public class PatientList {
             System.out.println("Empty List");
             return;
         }
-        Node current = head;
+        PatientNode current = head;
         while (current != null) {
             System.out.println(current.data);
             current = current.next;
