@@ -39,7 +39,7 @@ public class Patient {
     public void setAge(int age){
         this.age=age;
     }
-    public String toString() {
+    public String toString() {       //readable string
         return "Patient{id=" + id + ", name='" + name  + ", severity=" + severity + ", age=" + age + '}';
     }
 
