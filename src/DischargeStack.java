@@ -28,7 +28,7 @@ public class DischargeStack {
     }
     public void printStack() {
         if (top == null) {
-            System.out.println("Stack is empty.");
+            System.out.println("Empty Stack");
             return;
         }
 
