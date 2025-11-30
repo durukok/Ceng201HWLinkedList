@@ -1,19 +1,17 @@
 public class DischargeStack {
-    DischargeNode top;
+    private DischargeNode top;
 
-    public DischargeStack() {       // creates an empty stack
+    public DischargeStack() {
         top = null;
     }
-
     public void push(DischargeRecord record) {
         DischargeNode newNode = new DischargeNode(record);
         newNode.next = top;
         top = newNode;
     }
-
     public DischargeRecord pop() {
         if (top == null) {
-            System.out.println("Empty stack");
+            System.out.println("Empty Stack");
             return null;
         }
 
@@ -21,16 +19,16 @@ public class DischargeStack {
         top = top.next;
         return removed;
     }
-    public DischargeRecord peek() {         //see the top record
+    public DischargeRecord peek() {
         if (top == null) {
-            System.out.println("Empty stack");
+            System.out.println("Empty Stack");
             return null;
         }
         return top.data;
     }
     public void printStack() {
-        if (top == null) {      // empty stack
-            System.out.println("Empty stack");
+        if (top == null) {
+            System.out.println("Stack is empty.");
             return;
         }
 
@@ -42,4 +40,6 @@ public class DischargeStack {
             current = current.next;
         }
     }
+
+
 }
