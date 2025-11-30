@@ -1,7 +1,7 @@
 public class DischargeStack {
     DischargeNode top;
 
-    public DischargeStack() {
+    public DischargeStack() {       // creates an empty stack
         top = null;
     }
 
@@ -21,7 +21,7 @@ public class DischargeStack {
         top = top.next;
         return removed;
     }
-    public DischargeRecord peek() {
+    public DischargeRecord peek() {         //see the top record
         if (top == null) {
             System.out.println("Empty stack");
             return null;
@@ -29,7 +29,7 @@ public class DischargeStack {
         return top.data;
     }
     public void printStack() {
-        if (top == null) {
+        if (top == null) {      // empty stack
             System.out.println("Empty stack");
             return;
         }
