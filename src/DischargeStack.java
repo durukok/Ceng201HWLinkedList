@@ -10,7 +10,7 @@ public class DischargeStack {
         top = newNode;
     }
     public DischargeRecord pop() {
-        if (top == null) {
+        if (top == null) {      // empty stack check
             System.out.println("Empty Stack");
             return null;
         }
@@ -27,12 +27,12 @@ public class DischargeStack {
         return top.data;
     }
     public void printStack() {
-        if (top == null) {
+        if (top == null) {      // if empty stack
             System.out.println("Empty Stack");
             return;
         }
 
-        DischargeNode current = top;
+        DischargeNode current = top;        // start from the top
         System.out.println("Discharge Stack:");
 
         while (current != null) {
