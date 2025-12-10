@@ -10,14 +10,14 @@ public class TreatmentQueue {
     }
     // enqueue  is adding an element to the rear of the queue
     public void enqueue(TreatmentRequest request) {
-        TreatmentRequestNode newNode = new TreatmentRequestNode(request);
+        TreatmentRequestNode a = new TreatmentRequestNode(request);
 
         if (rear == null) {  // teh queue is empty
-            front = newNode;
-            rear = newNode;
+            front = a;
+            rear =a;
         } else {
-            rear.next = newNode;
-            rear = newNode;
+            rear.next = a;
+            rear = a;
         }
 
         count++;

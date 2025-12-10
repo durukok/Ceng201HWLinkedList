@@ -5,9 +5,9 @@ public class DischargeStack {
         top = null;
     }
     public void push(DischargeRecord record) {
-        DischargeNode newNode = new DischargeNode(record);
-        newNode.next = top;
-        top = newNode;
+        DischargeNode a  = new DischargeNode(record);
+        a.next = top;
+        top = a;
     }
     public DischargeRecord pop() {
         if (top == null) {      // empty stack check

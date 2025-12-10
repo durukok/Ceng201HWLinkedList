@@ -6,9 +6,9 @@ public class PatientList {
     }
     //adding the patient
     public void addPatient(Patient p){
-        PatientNode newNode=new PatientNode(p);
+        PatientNode a=new PatientNode(p);
         if(head==null){         //if list empty
-            head=newNode;
+            head=a;
             return;
         }
         //append at the end
@@ -16,7 +16,7 @@ public class PatientList {
         while(current.next!=null){
             current=current.next;
         }
-        current.next=newNode;
+        current.next=a;
     }
     //removing the patient
     public void removePatient(int id){
