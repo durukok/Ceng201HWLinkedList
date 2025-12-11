@@ -1,66 +1,74 @@
 public class PatientList {
     PatientNode head;
-    public PatientList(){       //Constructor
-        this.head=null;
 
+    public PatientList() {       //Constructor
+        this.head=null;
     }
+
     //adding the patient
-    public void addPatient(Patient p){
+    public void addPatient(Patient p) {
         PatientNode a=new PatientNode(p);
-        if(head==null){         //if list empty
+        if (head==null) {         //if list empty
             head=a;
             return;
         }
         //append at the end
         PatientNode current=head;
-        while(current.next!=null){
+        while (current.next!=null) {
             current=current.next;
         }
         current.next=a;
     }
+
     //removing the patient
-    public void removePatient(int id){
-        if (head == null) {         //if list is empty
+    public void removePatient(int id) {
+        if (head==null) {         //if list is empty
             System.out.println("Empty List");
-            return;
-        }
-        if (head.data.getId() == id) {   // If the patient to be deleted is at the beginning of the list
-            head = head.next;
-            System.out.println("ID: " + id + " removed");
-            return;
-        }
-        PatientNode current = head;       //Look in between: Proceed by checking current.next
-        while (current.next != null && current.next.data.getId() != id) {
-            current = current.next;
-        }
-        if (current.next == null) {      // If not found
-            System.out.println("ID: " + id + " not found");
-            return;
-        }
-        current.next = current.next.next;
-        System.out.println("ID: " + id + " removed");
-    }
-    //finding the patient
-    public Patient findPatient(int id) {
-        PatientNode current = head;
-        while (current != null) {
-            if (current.data.getId() == id) {
-                return current.data;  // found
+        } else {
+            if (head.data.getId()==id) {
+                head=head.next;
+                System.out.println("ID: "+id+" removed");
+            } else {
+                PatientNode current=head;
+                while (current.next!=null && current.next.data.getId()!=id) {
+                    current=current.next;
+                }
+                if (current.next==null) {
+                    System.out.println("ID: "+id+" not found");
+                } else {
+                    current.next=current.next.next;
+                    System.out.println("ID: "+id+" removed");
+                }
             }
-            current = current.next;
         }
-        return null;
     }
-    //printing the list
-    public void printList() {
-        if (head == null) {     //checking the list is empty or not
+    public void findPatient(int id) {
+        if (head==null) {
             System.out.println("Empty List");
-            return;
+        }else{
+            PatientNode current=head;
+            while (current!=null) {
+                if (current.data.getId()==id) {
+                    System.out.println("Found patient: "+current.data);
+                    current=null;
+                } else if (current.next==null) {
+                    System.out.println("ID: "+id+" not found");
+                    current=null;
+                } else {
+                    current=current.next;
+                }
+            }
         }
-        PatientNode current = head;
-        while (current != null) {
-            System.out.println(current.data);
-            current = current.next;
+    }
+    public void printList(){
+        if (head==null) {
+            System.out.println("Empty List");
+        }else{
+            PatientNode current=head;
+            while (current!=null) {
+                System.out.println(current.data);
+                current=current.next;
+            }
         }
     }
 }

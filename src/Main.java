@@ -10,11 +10,7 @@ public class Main{
         System.out.println("Removing patient with ID 2");
         list.removePatient(2);
         System.out.println("Searching for patient with ID 3");
-        Patient p = list.findPatient(3);
-        if (p != null)
-            System.out.println("Found: " + p);
-        else
-            System.out.println("Patient not found!");
+        list.findPatient(3);
         list.printList();
         //Task 2
         TreatmentQueue queue = new TreatmentQueue();
