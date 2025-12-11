@@ -46,7 +46,6 @@ public class TreatmentQueue {
             System.out.println("Queue is empty.");
             return;
         }
-
         TreatmentRequestNode current = front;
         System.out.println("Treatment Queue:");
 
