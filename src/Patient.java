@@ -3,11 +3,8 @@ public class Patient {
     private String name;
     private int severity;
     private int age;
-    public Patient() {      //Parameterless constructor
-        this.id=0;
-        this.name="";
-        this.severity=0;
-        this.age=0;
+    public Patient() {  //parameterless constructır
+        this(0, "", 0, 0);
     }
     public Patient(int id, String name, int severity, int age) {   // Parameterized constructor
         this.id=id;
@@ -40,11 +37,6 @@ public class Patient {
         this.age=age;
     }
     public String toString() {       //readable string
-        return "Patient{id="+id +", name='"+name+", severity="+severity+", age="+age+'}';
+        return "Patient{Id="+id +", Name='"+name+", Severity="+severity+", Age="+age+'}';
     }
-
-
-
-
-
 }

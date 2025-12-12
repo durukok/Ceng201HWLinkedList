@@ -4,7 +4,7 @@ public class Main{
         //Task 1
         list.addPatient(new Patient(1, "Mia",   7, 30));
         list.addPatient(new Patient(2, "Amanda",     5, 40));
-        list.addPatient(new Patient(3, "Emma", 9, 50));
+        list.addPatient(new Patient(3, "Lena", 9, 50));
         list.addPatient(new Patient(4, "Nicole",   3, 25));
         list.addPatient(new Patient(5, "Emily",   8, 60));
         System.out.println("Removing patient with ID 2");

@@ -5,14 +5,12 @@ public class PatientList {
         this.head=null;
     }
 
-    //adding the patient
     public void addPatient(Patient p) {
         PatientNode a=new PatientNode(p);
         if (head==null) {         //if list empty
             head=a;
             return;
         }
-        //append at the end
         PatientNode current=head;
         while (current.next!=null) {
             current=current.next;
@@ -20,7 +18,7 @@ public class PatientList {
         current.next=a;
     }
 
-    //removing the patient
+
     public void removePatient(int id) {
         if (head==null) {         //if list is empty
             System.out.println("Empty List");
