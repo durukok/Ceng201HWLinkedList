@@ -10,8 +10,17 @@ public class Main{
         System.out.println("Removing patient with ID 2");
         list.removePatient(2);
         System.out.println("Searching for patient with ID 3");
-        list.findPatient(3);
+        Patient found = list.findPatient(3);
+        if (found !=null) {
+            System.out.println("Found patient: " +found);
+        } else {
+            System.out.println("ID 3 is not found");
+        }
         list.printList();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+
         //Task 2
         TreatmentQueue queue = new TreatmentQueue();
         queue.enqueue(new TreatmentRequest(1));
@@ -22,6 +31,8 @@ public class Main{
         queue.enqueue(new TreatmentRequest(6));
         queue.enqueue(new TreatmentRequest(7));
         queue.enqueue(new TreatmentRequest(8));
+        System.out.println("The first version of queue:");
+        queue.printQueue();
         //printing the dequeued treatment requests
         System.out.println("Dequeued: " + queue.dequeue());
         System.out.println("Dequeued: " + queue.dequeue());
@@ -29,7 +40,26 @@ public class Main{
 
         System.out.println("Remaining queue:");     //printing the remaining queue
         queue.printQueue();
+        System.out.println();
+        System.out.println();
+        System.out.println();
         //Task 3
+        DischargeStack stack=new DischargeStack();
+        stack.push(new DischargeRecord(100));
+        stack.push(new DischargeRecord(200));
+        stack.push(new DischargeRecord(300));
+        stack.push(new DischargeRecord(400));
+        stack.push(new DischargeRecord(500));
+        System.out.println("The first version of stack:");
+        stack.printStack();
+        //popping some elements
+        System.out.println("Popped:"+stack.pop());
+        System.out.println("Popped:"+stack.pop());
+
+        System.out.println("Remaining stack:");     //printing the remaining stack
+        stack.printStack();
+
+
     }
 
 }

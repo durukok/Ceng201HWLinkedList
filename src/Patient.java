@@ -17,7 +17,7 @@ public class Patient {
         return this.id;
     }
     public void setId(int id){
-        this.id=id;
+        this.id =id;
     }
     public String getName(){
         return this.name;
@@ -34,9 +34,9 @@ public class Patient {
         return this.age;
     }
     public void setAge(int age){
-        this.age=age;
+        this.age= age;
     }
-    public String toString() {       //readable string
-        return "Patient{Id="+id +", Name='"+name+", Severity="+severity+", Age="+age+'}';
+    public String toString() {
+        return id + " - " + name + " (" + age + ", severity " + severity + ")";
     }
 }

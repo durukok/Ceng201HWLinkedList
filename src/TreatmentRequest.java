@@ -5,7 +5,8 @@ public class TreatmentRequest {
         this.patientId=patientId;
         this.arrivalTime=0;
     }
-    public String toString() {      //readable string
-        return "Request{patientId="+patientId+", arrivalTime="+arrivalTime+"}";
+    public String toString() {
+        return patientId + " (arrivalTime: " + arrivalTime + ")";
     }
+
 }

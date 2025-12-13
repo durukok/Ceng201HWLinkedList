@@ -1,26 +1,25 @@
 public class PatientList {
     PatientNode head;
 
-    public PatientList() {       //Constructor
+    public PatientList() {
         this.head=null;
     }
 
     public void addPatient(Patient p) {
-        PatientNode a=new PatientNode(p);
-        if (head==null) {         //if list empty
-            head=a;
+        PatientNode a =new PatientNode(p);
+        if (head==null) {
+            head= a;
             return;
         }
         PatientNode current=head;
         while (current.next!=null) {
             current=current.next;
         }
-        current.next=a;
+        current.next= a;
     }
 
-
     public void removePatient(int id) {
-        if (head==null) {         //if list is empty
+        if (head==null) {
             System.out.println("Empty List");
         } else {
             if (head.data.getId()==id) {
@@ -40,29 +39,22 @@ public class PatientList {
             }
         }
     }
-    public void findPatient(int id) {
-        if (head==null) {
-            System.out.println("Empty List");
-        }else{
-            PatientNode current=head;
-            while (current!=null) {
-                if (current.data.getId()==id) {
-                    System.out.println("Found patient: "+current.data);
-                    current=null;
-                } else if (current.next==null) {
-                    System.out.println("ID: "+id+" not found");
-                    current=null;
-                } else {
-                    current=current.next;
-                }
+    public Patient findPatient(int id) {
+        PatientNode temp =head;
+        while (temp !=null) {
+            if (temp.data.getId()== id) {
+                return temp.data;
             }
+            temp =temp.next;
         }
+        return null;
     }
+
     public void printList(){
         if (head==null) {
             System.out.println("Empty List");
         }else{
-            PatientNode current=head;
+            PatientNode current =head;
             while (current!=null) {
                 System.out.println(current.data);
                 current=current.next;
