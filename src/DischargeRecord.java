@@ -5,7 +5,7 @@ public class DischargeRecord {
         this.patientId=patientId;
         this.dischargeTime=System.currentTimeMillis();
     }
-    public String toString() {
+    public String toString() {  //readable stirng
         return patientId + " (discharged at " + dischargeTime + ")";
     }
 }
