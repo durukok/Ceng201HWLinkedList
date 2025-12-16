@@ -15,6 +15,7 @@ public class Main{
             System.out.println("Found patient: " +found);
         } else {
             System.out.println("ID 3 is not found");
+
         }
         list.printList();
         System.out.println();
