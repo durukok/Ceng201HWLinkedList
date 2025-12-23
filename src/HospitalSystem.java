@@ -53,13 +53,13 @@ public class HospitalSystem {
 
     // Print system state
     public void printSystemState() {
-        System.out.println("\n--- Patients ---");
+        System.out.println("Patients:");
         patientList.printList();
 
-        System.out.println("\n--- Treatment Queues ---");
+        System.out.println("Treatment Queues:");
         treatmentQueue.printQueue();
 
-        System.out.println("\n--- Discharge Stack ---");
+        System.out.println("Discharge Stack:");
         dischargeStack.printStack();
     }
 }

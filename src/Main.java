@@ -59,8 +59,33 @@ public class Main{
 
         System.out.println("Remaining stack:");     //printing the remaining stack
         s.printStack();
+        System.out.println();
+        System.out.println();
+        System.out.println();
 
+        //Task 4
+        HospitalSystem system = new HospitalSystem();
+        for (int i = 1; i <= 10; i++) {
+            system.addPatient(
+                    new Patient(i, "Patient " + i, i % 10 + 1, 30 + i)
+            );
+        }
+        system.addTreatmentRequest(new TreatmentRequest(1, false));
+        system.addTreatmentRequest(new TreatmentRequest(2, false));
+        system.addTreatmentRequest(new TreatmentRequest(3, true));
+        system.addTreatmentRequest(new TreatmentRequest(4, true));
+        system.addTreatmentRequest(new TreatmentRequest(5, false));
+        system.addTreatmentRequest(new TreatmentRequest(6, true));
+        system.addTreatmentRequest(new TreatmentRequest(7, false));
+        system.addTreatmentRequest(new TreatmentRequest(8, false));
 
+        system.addDischarge(9);
+        system.addDischarge(10);
+        system.processTreatment();
+        system.processTreatment();
+        system.processTreatment();
+        system.processTreatment();
+        system.printSystemState();
     }
 
 }
