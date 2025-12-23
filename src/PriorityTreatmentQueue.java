@@ -1,30 +1,42 @@
 public class PriorityTreatmentQueue {
-    private TreatmentQueue priorityQueue;
-    private TreatmentQueue normalQueue;
+    private  TreatmentQueue priorityQueue;
+    private  TreatmentQueue normalQueue;
+    private int totalRequests;
 
     public PriorityTreatmentQueue() {
-        priorityQueue = new TreatmentQueue();
-        normalQueue = new TreatmentQueue();
+        this.priorityQueue = new TreatmentQueue();
+        this.normalQueue = new TreatmentQueue();
+        this.totalRequests = 0;
     }
 
-    // Add request to correct queue
+    // Adding  request
     public void enqueue(TreatmentRequest request) {
-        if (request.priority) {
+        totalRequests++;
+        if (request.priority==true) {
             priorityQueue.enqueue(request);
-        } else {
-            normalQueue.enqueue(request);
+            return;
+
         }
+        normalQueue.enqueue(request);
+
     }
 
-    // Always serve priority queue first
+
+    //removing request
     public TreatmentRequest dequeue() {
+        TreatmentRequest r;
         if (priorityQueue.size() > 0) {
-            return priorityQueue.dequeue();
+            r=priorityQueue.dequeue();
         } else {
-            return normalQueue.dequeue();
+
+            r= normalQueue.dequeue();
         }
+        return r;
+
     }
 
+
+    //printing queues
     public void printQueue() {
         System.out.println("Priority Requests:");
         priorityQueue.printQueue();
@@ -32,5 +44,6 @@ public class PriorityTreatmentQueue {
         System.out.println("Normal Requests:");
         normalQueue.printQueue();
     }
+
 }
 

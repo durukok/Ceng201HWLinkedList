@@ -85,7 +85,7 @@ public class Main{
         system.processTreatment();
         system.processTreatment();
         system.processTreatment();
-        system.printSystemState();
+        system.printAll();
     }
 
 }
