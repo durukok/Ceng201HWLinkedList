@@ -15,7 +15,7 @@ public class Patient {
         this.severity=severity;
         this.age=age;
     }
-    //Getter and setter methods
+    //Getter and setter
     public int getId(){
         return this.id;
     }
@@ -39,7 +39,9 @@ public class Patient {
     public void setAge(int age){
         this.age= age;
     }
+    //readable String
     public String toString() {
         return id + " - " + name + " (" + age + ", severity " + severity + ")";
     }
+
 }

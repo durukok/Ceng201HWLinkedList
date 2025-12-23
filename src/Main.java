@@ -23,42 +23,42 @@ public class Main{
         System.out.println();
 
         //Task 2
-        TreatmentQueue queue = new TreatmentQueue();
-        queue.enqueue(new TreatmentRequest(1));
-        queue.enqueue(new TreatmentRequest(2));
-        queue.enqueue(new TreatmentRequest(3));
-        queue.enqueue(new TreatmentRequest(4));
-        queue.enqueue(new TreatmentRequest(5));
-        queue.enqueue(new TreatmentRequest(6));
-        queue.enqueue(new TreatmentRequest(7));
-        queue.enqueue(new TreatmentRequest(8));
+        TreatmentQueue q = new TreatmentQueue();
+        q.enqueue(new TreatmentRequest(1));
+        q.enqueue(new TreatmentRequest(2));
+        q.enqueue(new TreatmentRequest(3));
+        q.enqueue(new TreatmentRequest(4));
+        q.enqueue(new TreatmentRequest(5));
+        q.enqueue(new TreatmentRequest(6));
+        q.enqueue(new TreatmentRequest(7));
+        q.enqueue(new TreatmentRequest(8));
         System.out.println("The first version of queue:");
-        queue.printQueue();
+        q.printQueue();
         //printing the dequeued treatment requests
-        System.out.println("Dequeued: " + queue.dequeue());
-        System.out.println("Dequeued: " + queue.dequeue());
-        System.out.println("Dequeued: " + queue.dequeue());
+        System.out.println("Dequeued: " + q.dequeue());
+        System.out.println("Dequeued: " + q.dequeue());
+        System.out.println("Dequeued: " + q.dequeue());
 
         System.out.println("Remaining queue:");     //printing the remaining queue
-        queue.printQueue();
+        q.printQueue();
         System.out.println();
         System.out.println();
         System.out.println();
         //Task 3
-        DischargeStack stack=new DischargeStack();
-        stack.push(new DischargeRecord(100));
-        stack.push(new DischargeRecord(200));
-        stack.push(new DischargeRecord(300));
-        stack.push(new DischargeRecord(400));
-        stack.push(new DischargeRecord(500));
+        DischargeStack s=new DischargeStack();
+        s.push(new DischargeRecord(100));
+        s.push(new DischargeRecord(200));
+        s.push(new DischargeRecord(300));
+        s.push(new DischargeRecord(400));
+        s.push(new DischargeRecord(500));
         System.out.println("The first version of stack:");
-        stack.printStack();
+        s.printStack();
         //popping some elements
-        System.out.println("Popped:"+stack.pop());
-        System.out.println("Popped:"+stack.pop());
+        System.out.println("Popped:"+s.pop());
+        System.out.println("Popped:"+s.pop());
 
         System.out.println("Remaining stack:");     //printing the remaining stack
-        stack.printStack();
+        s.printStack();
 
 
     }

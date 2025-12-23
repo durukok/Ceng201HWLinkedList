@@ -1,10 +1,10 @@
 public class PatientList {
     PatientNode head;
-
+    //constructor
     public PatientList() {
         this.head=null;
     }
-
+    //adding the patient
     public void addPatient(Patient p) {
         PatientNode a =new PatientNode(p);
         if (head==null) {
@@ -17,7 +17,7 @@ public class PatientList {
         }
         current.next= a;
     }
-
+    //removing the patient
     public void removePatient(int id) {
         if (head==null) {
             System.out.println("Empty List");
@@ -39,6 +39,7 @@ public class PatientList {
             }
         }
     }
+    //searching the patient
     public Patient findPatient(int id) {
         PatientNode temp =head;
         while (temp !=null) {
@@ -49,7 +50,7 @@ public class PatientList {
         }
         return null;
     }
-
+    //printing the list
     public void printList(){
         if (head==null) {
             System.out.println("Empty List");

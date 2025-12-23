@@ -4,11 +4,13 @@ public class DischargeStack {
     public DischargeStack() {
         top=null;
     }
+    //adding element
     public void push(DischargeRecord record) {
         DischargeNode a=new DischargeNode(record);
         a.next=top;
         top=a;
     }
+    //removing element
     public DischargeRecord pop() {
         if (top==null) {      // empty stack checking
             System.out.println("Empty Stack");
@@ -18,6 +20,7 @@ public class DischargeStack {
         top=top.next;
         return removed;
     }
+    //returning top element
     public DischargeRecord peek() {
         if (top==null) {
             System.out.println("Empty Stack");
@@ -25,6 +28,7 @@ public class DischargeStack {
         }
         return top.data;
     }
+    //printing the stack
     public void printStack() {
         if (top==null) {      // if empty stack
             System.out.println("Empty Stack");

@@ -2,17 +2,17 @@ public class TreatmentQueue {
     TreatmentRequestNode front;  // head
     TreatmentRequestNode rear;   // tail
     int count;         //size
-
+    //constructor
     public TreatmentQueue() {
         front=null;
         rear=null;
         count=0;
     }
-    // enqueue  is adding an element to the rear of the queue
+    // enqueue  is adding element to the end of the queue
     public void enqueue(TreatmentRequest request) {
         TreatmentRequestNode a=new TreatmentRequestNode(request);
 
-        if (rear==null) {  // teh queue is empty
+        if (rear==null) {  // the queue is empty
             front=a;
             rear=a;
         } else {
@@ -22,25 +22,25 @@ public class TreatmentQueue {
 
         count++;
     }
-    //dequeue is removing and return the element from the front of the queue
+    //dequeue is removing the  element from the beginning  of the queue
     public TreatmentRequest dequeue() {
         if (front==null) {           //checkig the queue is empty
             System.out.println("Empty queue");
             return null;
         }
         TreatmentRequest removed=front.data;
-        front=front.next;  //moving the pointer to the next node
+        front=front.next;
         if (front==null) {
-            rear=null; // queue became empty
+            rear=null; // empty queue
         }
         count--;
         return removed;
     }
-    //size returns the number of requests in the queue
+    //size returns the number of requests
     public int size() {
         return count;
     }
-    //printQueue prints all requests in the queue
+    //printQueue prints all requests
     public void printQueue() {
         if (front==null) {
             System.out.println("Queue is empty.");
