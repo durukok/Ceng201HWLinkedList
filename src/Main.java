@@ -24,14 +24,14 @@ public class Main{
 
         //Task 2
         TreatmentQueue q = new TreatmentQueue();
-        q.enqueue(new TreatmentRequest(1));
-        q.enqueue(new TreatmentRequest(2));
-        q.enqueue(new TreatmentRequest(3));
-        q.enqueue(new TreatmentRequest(4));
-        q.enqueue(new TreatmentRequest(5));
-        q.enqueue(new TreatmentRequest(6));
-        q.enqueue(new TreatmentRequest(7));
-        q.enqueue(new TreatmentRequest(8));
+        q.enqueue(new TreatmentRequest(1,false));
+        q.enqueue(new TreatmentRequest(2,false));
+        q.enqueue(new TreatmentRequest(3,true));
+        q.enqueue(new TreatmentRequest(4,false));
+        q.enqueue(new TreatmentRequest(5,true));
+        q.enqueue(new TreatmentRequest(6,false));
+        q.enqueue(new TreatmentRequest(7,false));
+        q.enqueue(new TreatmentRequest(8,true));
         System.out.println("The first version of queue:");
         q.printQueue();
         //printing the dequeued treatment requests

@@ -1,7 +1,7 @@
 public class Patient {
-    private int id;
+    public  int id;
     private String name;
-    private int severity;
+    public  int severity;
     private int age;
     public Patient() {  //parameterless constructır
         this.id=0;
